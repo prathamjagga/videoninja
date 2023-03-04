@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
@@ -67,7 +67,7 @@ app.post("/get-title-description", async (req, res) => {
 
     res.status(200).json({ sucees: true, title, description });
   } catch (err) {
-    res.send({ err }).json(500);
+    res.status(500).json(err);
   }
 });
 
