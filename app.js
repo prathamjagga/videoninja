@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
@@ -56,13 +56,14 @@ app.post("/transcribe", async (req, res, next) => {
 
 app.post("/get-title-description", async (req, res) => {
   try {
+    console.log(req.body.transcription);
     let title = await runCompletion(`Below is the transcript of one of my videos
-  ${req.body.transcript}
+  ${req.body.transcription}
   Can you please suggest me a title for this video based on the transcript given to you.`);
 
     let description =
       await runCompletion(`Below is the transcript of one of my videos
-  ${req.body.transcript}
+  ${req.body.transcription}
   Can you please suggest me a 1000 word long description for this video based on the transcript given to you.`);
 
     res.status(200).json({ sucees: true, title, description });
