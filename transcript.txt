@@ -1,0 +1,229 @@
+WEBVTT
+
+NOTE
+Transcription provided by Deepgram
+Request Id: bcc0a4f2-e582-4713-8a8b-be4cb27677b5
+Created: 2023-03-04T05:29:12.364Z
+Duration: 392.896
+Channels: 1
+
+1
+00:00:00.819 --> 00:00:09.170
+- now before we dive into the car's content i'd like to give you a teaser or a taste of what you'll be able to do by the end of the course
+
+2
+00:00:10.304 --> 00:00:17.345
+- so this is going to be one example that's based on one topic that's covered in one subs section of the course
+
+3
+00:00:18.398 --> 00:00:28.252
+- now because this is a teaser lecture i'm not gonna explain the technical aspect of how am i doing this because i'm gonna teach you how to do this as you go through the course
+
+4
+00:00:28.590 --> 00:00:31.383
+- for now just sit back and enjoy this lecture
+
+5
+00:00:31.822 --> 00:00:38.962
+- and after this lecture we're gonna dive into the course content where you'll learn how to do things like this and much much more
+
+6
+00:00:39.380 --> 00:00:43.911
+- so in this video i'm gonna give you an example of hacking this windows computer
+
+7
+00:00:44.385 --> 00:00:46.164
+- from this linux machine
+
+8
+00:00:46.545 --> 00:00:51.964
+- so in this example i'm gonna use a program called beef which is a browser
+
+9
+00:00:52.265 --> 00:00:53.104
+- exploitation framework
+
+10
+00:00:54.118 --> 00:00:55.354
+- i'm gonna launch it from here
+
+11
+00:00:57.787 --> 00:01:08.429
+- and the way this works is it uses a javascript code to hook a target computer and then once a computer is hooked we'll be able to run a number of commands
+
+12
+00:01:08.806 --> 00:01:15.583
+- now to do that i'm gonna use man in the middle attack to automatically inject the hook code for beef
+
+13
+00:01:16.040 --> 00:01:20.470
+- so i'm gonna use a tool called man the middle life and i'm gonna do an ar piece spoof attack
+
+14
+00:01:21.123 --> 00:01:25.133
+- and i'm gonna give him my network interface and i'm gonna give it the gateway
+
+15
+00:01:25.630 --> 00:01:38.130
+- and i'm gonna give it the target ip address which is the address of the windows machine then i'm gonna tell it that i want you to inject a javascript url and i'm gonna give it the location where the hook code is stored
+
+16
+00:01:39.543 --> 00:01:40.342
+- i'm gonna hit enter
+
+17
+00:01:42.420 --> 00:02:09.765
+- and that's it running now i know this looks very complicated you don't know where i got the options from all this looks confusing but again don't worry about that we're gonna talk about this and go through this step by step so it be very easy for you right now all you need to understand is this program is going to inject the hook code so the code that allows beef to hack into that computer into the browser of the target person so that the code will run without the person even knowing
+
+18
+00:02:10.423 --> 00:02:13.880
+- so i'm gonna go to my windows machine i'm gonna run the web browser
+
+19
+00:02:14.834 --> 00:02:17.995
+- and i'm just gonna go to a website so i'm just gonna go to bank dot com
+
+20
+00:02:22.407 --> 00:02:23.923
+- now if we go back to the kelly machine
+
+21
+00:02:25.000 --> 00:02:29.464
+- you'll see that we have the ip address of the target person under the hooked browser
+
+22
+00:02:30.444 --> 00:02:37.324
+- and if we click on the command tab you'll see a large number of categories with commands that you can run on the target computer
+
+23
+00:02:38.059 --> 00:02:43.639
+- again we'll talk about that later in future videos what i'm interested in is a plug
+
+24
+00:02:44.180 --> 00:02:48.734
+- which allows to show a notification bar on the target computer
+
+25
+00:02:49.915 --> 00:02:55.927
+- and what i'm gonna say in that notification bar is i'm gonna say that there is a new update click here to install it
+
+26
+00:02:56.846 --> 00:03:05.323
+- so what this is gonna do is it's gonna show the target person that there is a new update and once they installed that new update i'll hack into their computer
+
+27
+00:03:05.682 --> 00:03:11.619
+- to do that i'm gonna have to use a backdoor now i've already made a back that's not detectable by antivirus programs
+
+28
+00:03:12.039 --> 00:03:16.519
+- i'm gonna i'm not gonna show you how to do that now but in the course you'll learn how to do that
+
+29
+00:03:17.319 --> 00:03:19.799
+- so right now i'm just gonna say where i start the backdoor
+
+30
+00:03:20.334 --> 00:03:22.526
+- and i called it update dot t e
+
+31
+00:03:23.642 --> 00:03:26.313
+- so that's it that's all done i'm gonna click on execute
+
+32
+00:03:27.230 --> 00:03:28.979
+- and that will execute it for me
+
+33
+00:03:29.717 --> 00:03:38.730
+- now before i go and run the update i'm going to listen for incoming connections so that i can connect to the target computer once they try to update their computer
+
+34
+00:03:39.944 --> 00:03:46.144
+- so again i'm gonna explain why we need to do this and how to do this in future lecture right now i'm just gonna do it very quickly
+
+35
+00:03:48.711 --> 00:03:59.990
+- and once we do that if we go on the target machine you'll see that the their firefox is telling then there is that there is a critical update and you need to click here to install that update
+
+36
+00:04:00.407 --> 00:04:01.479
+- i'm gonna click it
+
+37
+00:04:03.299 --> 00:04:07.419
+- and you can see that it's downloading an updates file for me i'm gonna save it
+
+38
+00:04:09.432 --> 00:04:11.248
+- now that's downloaded for me
+
+39
+00:04:11.665 --> 00:04:18.267
+- so if i go to my downloads just to show you what the file look like you can see that it looks like a normal file
+
+40
+00:04:18.858 --> 00:04:21.408
+- it has a nice icon if we run it
+
+41
+00:04:22.404 --> 00:04:31.317
+- we'll actually get an installer that update flash for us but at the same time this is going to execute my backdoor at the background
+
+42
+00:04:31.836 --> 00:04:42.251
+- don't worry about this i'm gonna teach you how to make your trojan or your evil files look and function just like any other file so you can have a picture a pdf
+
+43
+00:04:42.644 --> 00:04:52.295
+- or a installer like i have in here that works like a normal file but at the same time when it gets executed it'll execute your evil code in the background
+
+44
+00:04:53.267 --> 00:05:01.200
+- so now even though that the target person is happy they think they're installing an update for their flash player if we go back to the ka machine
+
+45
+00:05:02.014 --> 00:05:04.911
+- you'll see that we managed to get a reverse session
+
+46
+00:05:05.370 --> 00:05:06.689
+- from the windows machine
+
+47
+00:05:08.807 --> 00:05:10.885
+- so i'm gonna interact with that computer
+
+48
+00:05:11.979 --> 00:05:13.557
+- and now i'm inside it
+
+49
+00:05:14.096 --> 00:05:31.309
+- so i can do so many things of the target computer i basically have full control over that computer and we're gonna talk about all the things that you can do in the post connection section of this course what i wanna do now is i wanna show you how to access the webcam of the target computer
+
+50
+00:05:32.049 --> 00:05:34.869
+- so we're gonna use a plugin that comes with me interpreter
+
+51
+00:05:35.569 --> 00:05:37.349
+- so i'm just gonna do webcam
+
+52
+00:05:39.144 --> 00:05:39.644
+- stream
+
+53
+00:05:40.264 --> 00:05:41.084
+- gonna hit enter
+
+54
+00:05:45.197 --> 00:06:17.794
+- and as you can see i managed to turn on the webcam of the target computer so this is actually a webcam that's attached to the windows machine and right there you can see me and i basically have windows machine i can do anything i want on the windows machine and i can also turn the webcam i can inject a key logger i basically have full control over that machine now again this is just an example of of one attack that we're going to use we're gonna do so many more attacks like this and all of them are gonna allow us to gain full control over the target system
+
+55
+00:06:19.970 --> 00:06:30.445
+- so don't worry about how to do this attack don't worry about the commands don't worry about all of that this is just a teaser a simple taste of the things that you'll be able to do by the end of the course
+
