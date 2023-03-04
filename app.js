@@ -55,16 +55,20 @@ app.post("/transcribe", async (req, res, next) => {
 });
 
 app.post("/get-title-description", async (req, res) => {
-  let title = await runCompletion(`Below is the transcript of one of my videos
+  try {
+    let title = await runCompletion(`Below is the transcript of one of my videos
   ${req.body.transcript}
   Can you please suggest me a title for this video based on the transcript given to you.`);
 
-  let description =
-    await runCompletion(`Below is the transcript of one of my videos
+    let description =
+      await runCompletion(`Below is the transcript of one of my videos
   ${req.body.transcript}
   Can you please suggest me a 1000 word long description for this video based on the transcript given to you.`);
 
-  res.status(200).json({ sucees: true, title, description });
+    res.status(200).json({ sucees: true, title, description });
+  } catch (err) {
+    res.send({ err }).json(500);
+  }
 });
 
 app.listen(4000, () => {
