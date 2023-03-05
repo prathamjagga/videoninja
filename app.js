@@ -64,7 +64,7 @@ app.post("/get-title-description", async (req, res) => {
     let description =
       await runCompletion(`Below is the transcript of one of my videos
   ${req.body.transcription}
-  Can you please suggest me a 1000 word long description for this video based on the transcript given to you.`);
+  Please come up with an interesting description for this video for YouTube based on the transcript given to you. Also add some hashtags.`);
 
     res.status(200).json({ sucees: true, title, description });
   } catch (err) {
